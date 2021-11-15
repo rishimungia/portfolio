@@ -329,17 +329,16 @@ $aos-distance: 50px; // It has to be above import
             justify-content: center;
             align-items: center;
             p {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 text-align: center;
-                font-weight: 400;
-                margin: 2rem 0;
+                margin: 3rem 0;
             }
         }
 
         .tech-apps {
-            // align-items: flex-end;
+            align-items: flex-end;
             grid-area: tech-apps;
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -353,6 +352,9 @@ $aos-distance: 50px; // It has to be above import
 
         .creative-apps {
             grid-area: creative-apps;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .pallet {
