@@ -500,8 +500,10 @@ $aos-distance: 50px; // It has to be above import
 
         .project-para, .project-img-para {
             padding: 0rem 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2.5rem;
             text-align: justify;
+            white-space: break-spaces;
+            line-height: 1.75rem;
             h2 {
                 font-weight: 400;
             }
@@ -512,8 +514,8 @@ $aos-distance: 50px; // It has to be above import
             flex-direction: column;
 
             .project-image {
-                height: 13.5rem;
-                width: 100%;
+                aspect-ratio: 1;
+                border-radius: 1rem;
                 background-size: cover;
                 background-position: center;
             }
@@ -575,15 +577,13 @@ $aos-distance: 50px; // It has to be above import
 
         .project-img-para {
             flex-direction: row !important;
-            flex-basis: 100% !important;
             gap: 2rem;
 
             h2 {
                 margin: 0;
             }
-            .project-image {
-                width: 115rem !important;
-                // height: unset !important;
+            div {
+                flex-basis: 100%;
             }
         }
     }
