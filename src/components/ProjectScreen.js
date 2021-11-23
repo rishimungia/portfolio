@@ -1,5 +1,5 @@
 import { MdClose } from "react-icons/md";
-import projectData from '../data/projects.json';
+import projectData from '../data/projectsData';
 
 const ProjectScreen = ({ projectScreen, setProjectScreen }) => {
     const data = projectData[projectScreen.id];
@@ -26,7 +26,7 @@ const ProjectScreen = ({ projectScreen, setProjectScreen }) => {
                 <>
                     <div 
                         className="cover-image"
-                        style={{backgroundImage: `url(`+data.coverImage+`)`}}
+                        style={{backgroundImage: `url(`+data.coverImage.default+`)`}}
                     ></div>
 
                     <h1>{data.title}</h1>

@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import projects from '../data/projects.json';
+import projects from '../data/projectsData';
 
 const Projects = ({ setIsHovering, setProjectScreen }) => {
     const delay = 500;
@@ -18,6 +18,7 @@ const Projects = ({ setIsHovering, setProjectScreen }) => {
                                     description={project.description}
                                     delay={delay*(project.id % 3)}
                                     onClick={() => setProjectScreen({id: project.id, isOpen: true})}
+                                    key={project.id}
                                 />
                             )
                         })

@@ -1,5 +1,5 @@
-import techStack from '../data/tech-stack.png';
-import creativeApps from '../data/creative-apps.png';
+import techStack from '../data/assets/tech-stack.png';
+import creativeApps from '../data/assets/creative-apps.png';
 
 const MyToolkit = () => {
     return ( 

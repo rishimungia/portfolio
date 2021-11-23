@@ -1,10 +1,10 @@
-[
+const projectsData = [
     {
         "id": 0,
         "title": "COVIDSOS Bot",
         "description": "Twitter Bot to help people during the COVID19 pandemic",
         "cardImage": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png",
-        "coverImage": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9bc27292880429.5e569ff84e4d0.gif",
+        "coverImage": require("../data/assets/tweetBotCover.png"),
 
         "content": [
             {
@@ -130,4 +130,6 @@
             }
         ]
     }
-]
+];
+
+export default projectsData;
