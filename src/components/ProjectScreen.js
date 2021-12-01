@@ -26,7 +26,7 @@ const ProjectScreen = ({ projectScreen, setProjectScreen }) => {
                 <>
                     <div 
                         className="cover-image"
-                        style={{backgroundImage: `url(`+data.coverImage.default+`)`}}
+                        style={{backgroundImage: `url(`+data.coverImage+`)`}}
                     ></div>
 
                     <h1>{data.title}</h1>

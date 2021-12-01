@@ -3,8 +3,8 @@ const projectsData = [
         "id": 0,
         "title": "COVIDSOS Bot",
         "description": "Twitter Bot to help people during the COVID19 pandemic",
-        "cardImage": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png",
-        "coverImage": require("../data/assets/tweetBotCover.png"),
+        "cardImage": require("../data/assets/tweet-bot-card.png").default,
+        "coverImage": require("../data/assets/tweet-bot-cover.png").default,
 
         "content": [
             {
@@ -23,7 +23,7 @@ const projectsData = [
                 "imagePara": {
                     "style": 1,
                     "title": "| CovidDM",
-                    "image": "https://basicarticle.com/wp-content/uploads/2021/06/twitter-the-basics-on-how-to-to-use-it-for-business.gif",
+                    "image": require("../data/assets/tweet-bot-a.png").default,
                     "content": "If the user is following the Bot account, they can get any information related to COVID19 directly through their personal messages. The availabe commands for DM module are:\n\n> CovidStatus: Get details of present COVID cases.\n> CovidSOS [Location] [Requirement]: Get relevant #COVIDSOS Tweets.\n> Stop: Unenroll from the CovidDM module."
                 }
             },
@@ -40,8 +40,8 @@ const projectsData = [
         "id": 1,
         "title": "Nano Slayer",
         "description": "2D Action Platformer Game made using Unity Engine",
-        "cardImage": "https://purepng.com/public/uploads/thumbnail//google-stadia-logo-hd4.png",
-        "coverImage": "image-url",
+        "cardImage": require("../data/assets/nano-slayer-card-2.png").default,
+        "coverImage": require("../data/assets/nano-slayer-cover.png").default,
 
         "content": [
             {
@@ -53,7 +53,7 @@ const projectsData = [
                 "imagePara": {
                     "style": 1,
                     "title": "| Player Mechanics",
-                    "image": "https://shush25.github.io/graphics-project/static/media/rishi1.4733a2b6.png",
+                    "image": require("../data/assets/nano-slayer-a.png").default,
                     "content": "Since this is core part of the game, it took the most time to perfect. A bad player controller can easily break immersion and break the game so I put a lot of effort to make the movement as fluid as possible. There are some special player mechanics apart from base movement: \n> Wall Sliding\n> Double Jump\n> Wall Jump"
                 }
             },
@@ -67,7 +67,7 @@ const projectsData = [
                 "imagePara": {
                     "style": 0,
                     "title": "| Jumper",
-                    "image": "https://shush25.github.io/graphics-project/static/media/rishi1.4733a2b6.png",
+                    "image": require("../data/assets/nano-slayer-b.png").default,
                     "content": "This is one of the more annoing ones to kill. It jumps above the player and does a massive damage by directly landing on the head."
                 }
             },
@@ -75,7 +75,7 @@ const projectsData = [
                 "imagePara": {
                     "style": 1,
                     "title": "| Atomic Crab",
-                    "image": "https://shush25.github.io/graphics-project/static/media/rishi1.4733a2b6.png",
+                    "image": require("../data/assets/nano-slayer-c.png").default,
                     "content": "It's the result of a radioactive experiment on a crab gone very WRONG! It shoots radioactive projectiles that explode instantly on impact. However it dosent like to be in close contact to the player."
                 }
             },
@@ -83,7 +83,7 @@ const projectsData = [
                 "imagePara": {
                     "style": 0,
                     "title": "| Robo Spider",
-                    "image": "https://shush25.github.io/graphics-project/static/media/rishi1.4733a2b6.png",
+                    "image": require("../data/assets/nano-slayer-d.png").default,
                     "content": "This sneaky spider has just one goal, to sneak up behind the Slayer and Go BOOM! And it is most definately not a reskined Minecraft Creeper."
                 }
             },
@@ -97,11 +97,6 @@ const projectsData = [
                 "paragraph": {
                     "title": "| Play Now",
                     "content": "Comming Soon!"
-                }
-            },
-            {
-                "paragraph": {
-                    "title": "| Gameplay Screenshots"
                 }
             }
         ]
