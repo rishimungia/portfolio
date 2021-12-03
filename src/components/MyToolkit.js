@@ -4,7 +4,7 @@ import creativeApps from '../data/assets/creative-apps.png';
 const MyToolkit = () => {
     return ( 
         <div className="panel">
-            <div className="toolkit-container">
+            <div className="toolkit-container" id="toolkit">
                 <h1>My Toolkit</h1>
                 <div className="toolkit-grid">
                     <div className="pixel" data-aos="fade-up" ><p>Pixel Perfect Code</p></div>

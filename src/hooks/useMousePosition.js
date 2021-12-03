@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function useMousePosition() {
-  const [mousePosition, setMousePosition] = useState({ x: null, y: null, down: false });
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0, down: false });
 
   useEffect(() => {
     const mouseMoveHandler = (e) => {
@@ -10,9 +10,9 @@ export default function useMousePosition() {
       setMousePosition({ x: clientX, y: clientY });
 
       if (buttons > 0) 
-        setMousePosition({ down: true });
+        setMousePosition({ x: clientX, y: clientY, down: true });
       else
-        setMousePosition({ down: false });
+        setMousePosition({ x: clientX, y: clientY, down: false });
     };
     document.addEventListener("mousemove", mouseMoveHandler);
 

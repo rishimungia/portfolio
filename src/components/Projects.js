@@ -4,7 +4,7 @@ import projects from '../data/projectsData';
 const Projects = ({ setIsHovering, setProjectScreen }) => {
     const delay = 500;
     return (
-        <div className="panel">
+        <div className="panel" id="projects">
             <div className="projects-container">
                 <h1>Projects</h1>
                 <div className="project-grid">

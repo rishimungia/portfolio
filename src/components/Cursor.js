@@ -9,14 +9,14 @@ const Cursor = ({ isHovering }) => {
         cursorStyle = {
             left: `calc(${x}px - 10px)`, 
             top: `calc(${y}px - 10px)`, 
-            filter: 'blur(15px)',
-            background: 'hsla(0, 0%, 100%, 0.2)'
+            filter: 'blur(10px)',
+            background: 'hsla(0, 0%, 100%, 0.05)'
         }
     } else if (isHovering && down) {
         cursorStyle = {
             left: `calc(${x}px - 10px)`, 
             top: `calc(${y}px - 10px)`, 
-            background: 'hsla(0, 0%, 100%, 0.4)', 
+            background: 'hsla(0, 0%, 100%, 0.2)', 
             filter: 'blur(10px)'
         };
     } else if (!isHovering && down) {

@@ -101,30 +101,6 @@ const projectsData = [
             }
         ]
     },
-    {
-        "id": 2,
-        "title": "Project C",
-        "description": "Fugiat ut consequat deserunt ad voluptate.",
-        "cardImage": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png",
-        "coverImage": "image-url",
-
-        "content": [
-            {
-                "paragraph": {
-                    "title": "Subtitle B1",
-                    "content": "Sit ea non officia proident qui nostrud laborum ea officia minim nulla exercitation. Sit ipsum non anim cupidatat cillum velit. Magna elit velit culpa eu sint quis incididunt. Dolor amet aute laboris irure amet Lorem sint incididunt. Ut irure dolore eiusmod mollit amet incididunt."
-                }
-            },
-            {
-                "imagePara": {
-                    "style": 1,
-                    "title": "Subtitle B2",
-                    "image": "image-url",
-                    "content": "Sit ea non officia proident qui nostrud laborum ea officia minim nulla exercitation. Sit ipsum non anim cupidatat cillum velit. Magna elit velit culpa eu sint quis incididunt. Dolor amet aute laboris irure amet Lorem sint incididunt. Ut irure dolore eiusmod mollit amet incididunt."
-                }
-            }
-        ]
-    }
 ];
 
 export default projectsData;

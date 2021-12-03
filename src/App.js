@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './styles.scss';
 
 import useCheckScreen from './hooks/useCheckScreen';
 
@@ -9,7 +10,6 @@ import Cursor from "./components/Cursor";
 import GradientTitle from "./components/GradientTitle";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import './styles.scss';
 import MyToolkit from './components/MyToolkit';
 import FloatingButton from './components/FloatingButton';
 import FloatingMenu from './components/FloatingMenu';

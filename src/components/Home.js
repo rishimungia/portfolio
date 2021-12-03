@@ -3,7 +3,7 @@ import profile from '../data/assets/Me800.jpg';
 const Home = () => {
     return ( 
         <div className="panel">
-            <div className="home-container">
+            <div className="home-container" id="home">
                 <div>
                     <div className="profile-glow"></div>
                     <div className="profile-container">

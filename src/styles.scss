@@ -86,11 +86,25 @@ $aos-distance: 50px; // It has to be above import
     height: 100%;
     padding: 0 1rem;
     border-radius: 0.5rem;
-    line-height: 200%;
-    transition: all 0.2s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.hover-btn-effect {
+    position: absolute;
+    top: -2%;
+    left: -4%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    transition: background 0.1s ease;
+    transform-origin: 100px;
+    pointer-events: none;
 }
 .hover-button:hover {
-    background: hsla(0, 0%, 50%, 0.2);
+    .hover-btn-effect {
+        background: hsla(0, 0%, 50%, 0.2);
+    }
 }
 
 .panel {
