@@ -47,7 +47,7 @@ function App() {
       <Projects isHovering={isHovering} setIsHovering={setIsHovering} setProjectScreen={setProjectScreen}/>
       <FloatingMenu isOpen={isOpen} setIsOpen={setIsOpen} isDark={isDark} setIsDark={setIsDark} />
       <FloatingButton isOpen={isOpen} setIsOpen={setIsOpen} />
-      <Navbar isHovering={isHovering} setIsHovering={setIsHovering} />
+      <Navbar isMobile={isMobile} setIsHovering={setIsHovering} />
       <ProjectScreen projectScreen={projectScreen} setProjectScreen={setProjectScreen} />
       {!isMobile && <Cursor isHovering={isHovering} />}
     </div>

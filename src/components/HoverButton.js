@@ -4,7 +4,6 @@ import { useRef } from 'react';
 const HoverButton = ({ setIsHovering, text, link }) => {
     const { x, y } = useMousePosition();
     let relativeX, relativeY;
-    let hoverEffect = false;
 
     const inputRef = useRef();
     

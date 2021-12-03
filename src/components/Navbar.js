@@ -1,10 +1,12 @@
 import HoverButton from './HoverButton';
 
-const Navbar = ({ setIsHovering }) => {
+const Navbar = ({ isMobile, setIsHovering }) => {
     return ( 
         <div className="navbar">
             <p className='nav-logo'>RM</p>
+            
             <div className="nav-links">
+            {!isMobile ? <> 
                 <HoverButton
                     setIsHovering={setIsHovering} 
                     text={"Tools"}
@@ -19,9 +21,15 @@ const Navbar = ({ setIsHovering }) => {
                     setIsHovering={setIsHovering} 
                     text={"Work in Progress"}
                     link={"#home"}
-                /> 
+                />
+                </>
+                :<HoverButton
+                    setIsHovering={setIsHovering} 
+                    text={"Work in Progress"}
+                    link={"#home"}
+                />
+            }
             </div>
-            
         </div>
      );
 }
