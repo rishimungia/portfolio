@@ -14,7 +14,7 @@ const FloatingMenu = ({ isOpen, setIsOpen, isDark, setIsDark }) => {
     return ( 
         <div className="menu-container" style={isOpen ? visible : null}>
 
-            <div className="menu-item" ><p>Contact</p></div>
+            <a href="mailto:rishi.mungia@gmail" style={{display: 'contents'}}><div className="menu-item" ><p>Contact</p></div></a>
             <div className="menu-item" onClick={() => setIsDark(!isDark)}>
                 <p>Light</p>
                 <p>Dark</p>
