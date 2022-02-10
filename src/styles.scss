@@ -149,7 +149,7 @@ section {
     padding: 0.6rem 1rem;
     border-radius: 8px;
     transform: translateX(10rem);
-    animation: 0.5s ease 1s forwards slide-in-right, 0.5s ease 3.5s forwards slide-out-right;
+    animation: 0.5s ease 2s forwards slide-in-right, 0.5s ease 5.5s forwards slide-out-right;
 }
 
 .floating-btn-popup::after {
@@ -715,7 +715,7 @@ footer {
         right: unset;
         left: 20px;
         transform: translateX(-10rem);
-        animation: 0.5s ease 1s forwards slide-in-left, 0.5s ease 3.5s forwards slide-out-left;
+        animation: 0.5s ease 2s forwards slide-in-left, 0.5s ease 5.5s forwards slide-out-left;
         
     }
     .floating-btn-popup::after {

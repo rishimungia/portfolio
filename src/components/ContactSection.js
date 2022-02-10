@@ -24,7 +24,9 @@ export default function ContactSection() {
         <div className="contact-container">
           <div className="about-card">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi perspiciatis, totam a ullam quaerat tempore aliquid quo vitae veritatis magni veniam aperiam deleniti minima quisquam voluptatum voluptatem ex ea. Eius doloribus eaque facere, et exercitationem laboriosam ipsam incidunt expedita at, necessitatibus fuga consequatur sunt dolorum quibusdam! Animi, qui quam.</p>
+            <p>I am 3rd Year Student persuing B.Tech in Computer Science from VIT, Chennai. I am an enthusiastic and curious learner always trying new technologies. I come from Bikaner, Rajasthan where I completed my Higher Secondary schooling.<br /><br />
+            I am passionate about Video Games and my dream is to work on a AAA Game. I like to create awe-inspiring user-experiences.<br /><br />
+            Currently I am working as a freelance frontend developer and am the President at Game Development Club, VITC.</p>
           </div>
 
           <div className="contact-card-container">
