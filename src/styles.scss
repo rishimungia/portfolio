@@ -443,26 +443,26 @@ section {
 
     .project-grid {
         margin: 5rem auto;
-        max-width: 90vw;
         display: flex;
         flex-wrap: wrap;
         gap: 1.2rem;
         justify-content: center;
-        flex-direction: row;
+        padding: 1rem;
 
         .project-card {
-            width: 100%;
-            aspect-ratio: 9 / 13;
+            width: 17rem;
+            height: 28.25rem;
             background: var(--bg-color);
             border-radius: 25px;
             overflow: hidden;
             position: relative;
+            padding: 2rem;
 
             .image {
                 background-size: 50%;
                 background-repeat: no-repeat;
                 background-position: center;
-                height: 24rem;
+                height: 65%;
             }
             h2 {
                 text-align: center;
@@ -478,6 +478,7 @@ section {
         .card-blur {
             position: absolute;
             top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             backdrop-filter: var(--glass-filter);
@@ -603,7 +604,8 @@ section {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1.2rem;
+        padding: 1rem;
 
         .about-card {
             width: 17rem;
@@ -612,11 +614,40 @@ section {
             background: var(--bg-color-dull);
             border: 1px solid var(--border);
             border-radius: 25px;
+            position: relative;
+            overflow: hidden;
 
             h2 {
                 font-size: 2rem;
                 font-weight: 400;
                 margin: 0;
+            }
+
+            .about-plus-btn {
+                position: absolute;
+                inset: auto 1.5rem 1.5rem auto;
+                background: hsla(0, 0%, 60%, 0.3);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2rem;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                background: hsla(0, 0%, 80%, 0.7);
+                color: #444444;
+                font-size: 1.5rem;
+                transform: rotate(-45deg);
+                transition: transform 0.6s 0.2s ease-in-out;
+            }
+
+            .about-card-plus {
+                position: absolute;
+                inset: 0;
+                background: #FA243C;
+                color: #FFFFFF;
+                padding: 2rem;
+                clip-path: circle(0rem at calc(100% - 2.5rem) calc(100% - 2.5rem));
+                transition: clip-path 0.5s ease-in-out;
             }
 
         }
@@ -747,15 +778,6 @@ footer {
     }
     .pixel, .pallet {
         height: 30rem !important; 
-    }
-    
-    .project-grid {
-        width: 70vw;
-
-        .project-card {
-            width: 20.5rem !important;
-            aspect-ratio: 9 / 15 !important;
-        }
     }
 
     .project-screen {
