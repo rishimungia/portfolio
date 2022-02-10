@@ -1,5 +1,8 @@
-import { MdClose, MdHomeFilled } from 'react-icons/md';
-import { AiFillGithub } from 'react-icons/ai';
+import React from "react"
+
+import { MdClose } from '@react-icons/all-files/md/MdClose';
+import { MdHome } from '@react-icons/all-files/md/MdHome';
+import { AiFillGithub } from '@react-icons/all-files/ai/AiFillGithub';
 
 const FloatingMenu = ({ isOpen, setIsOpen, isDark, setIsDark }) => {
     const visible = {transform: 'translateY(0) scale(1)', opacity: '1', zIndex: '1'};
@@ -21,7 +24,7 @@ const FloatingMenu = ({ isOpen, setIsOpen, isDark, setIsDark }) => {
                 <div className="theme-switch" style={isDark ? {transform: 'translateX(100%)'} : null}></div>
             </div>
             <div className="menu-item icon" onClick={() => setIsOpen(false)}><MdClose /></div>
-            <div className="menu-item icon" onClick={scrollToTop}><MdHomeFilled /></div>
+            <div className="menu-item icon" onClick={scrollToTop}><MdHome /></div>
             <a href="https://github.com/rishimungia"><div className="menu-item icon"><AiFillGithub /></div></a>
         </div>
     );

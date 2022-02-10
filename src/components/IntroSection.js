@@ -1,8 +1,10 @@
+import React from "react"
+
 import profile from '../data/assets/Me800.jpg';
 
-const Home = () => {
+const IntroSection = () => {
     return ( 
-        <div className="panel">
+        <section>
             <div className="home-container" id="home">
                 <div>
                     <div className="profile-glow"></div>
@@ -19,9 +21,8 @@ const Home = () => {
                     <p>Web developer, Game designer and UI/UX enthusiast who loves to create breathtaking experiences</p>
                 </div>
             </div>
-            
-        </div>
+        </section>
      );
 }
  
-export default Home;
+export default IntroSection;

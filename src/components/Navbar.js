@@ -1,32 +1,37 @@
+import React from "react"
+
 import HoverButton from './HoverButton';
 
-const Navbar = ({ isMobile, setIsHovering }) => {
+const Navbar = ({ isMobile, setCursorHover }) => {
     return ( 
         <div className="navbar">
-            <p className='nav-logo'>RM</p>
+            <a 
+                className='nav-logo'
+                href="#home"
+            >RM</a>
             
             <div className="nav-links">
             {!isMobile ? <> 
                 <HoverButton
-                    setIsHovering={setIsHovering} 
+                    setCursorHover={setCursorHover} 
                     text={"Tools"}
                     link={"#toolkit"}
                 /> 
                 <HoverButton
-                    setIsHovering={setIsHovering} 
+                    setCursorHover={setCursorHover} 
                     text={"Projects"}
                     link={"#projects"}
                 /> 
                 <HoverButton
-                    setIsHovering={setIsHovering} 
-                    text={"Work in Progress"}
-                    link={"#home"}
+                    setCursorHover={setCursorHover} 
+                    text={"Contact"}
+                    link={"#contact"}
                 />
                 </>
                 :<HoverButton
-                    setIsHovering={setIsHovering} 
-                    text={"Work in Progress"}
-                    link={"#home"}
+                    setCursorHover={setCursorHover} 
+                    text={"Contact"}
+                    link={"#contact"}
                 />
             }
             </div>

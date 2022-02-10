@@ -1,47 +1,28 @@
 {
-  "homepage": "https://rishimungia.github.io",
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "rishimungia.github.io",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "aos": "^3.0.0-beta.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-scripts": "4.0.3",
-    "sass": "^1.43.2",
-    "web-vitals": "^1.0.1"
-  },
+  "description": "rishimungia.github.io",
+  "author": "rishimungia",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "develop": "gatsby develop",
+    "start": "gatsby develop -H 0.0.0.0 -o",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages -d public -b main"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
+  "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "aos": "^2.3.4",
+    "gatsby": "^4.6.0",
+    "gatsby-plugin-sass": "^5.6.0",
+    "gh-pages": "^3.2.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.49.0"
   }
 }

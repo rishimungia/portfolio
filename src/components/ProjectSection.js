@@ -1,18 +1,18 @@
+import React from "react"
+
 import ProjectCard from "./ProjectCard";
 import projects from '../data/projectsData';
 
-const Projects = ({ setIsHovering, setProjectScreen }) => {
+const ProjectSection = ({ setProjectScreen }) => {
     const delay = 500;
     return (
-        <div className="panel" id="projects">
-            <div className="projects-container">
+        <section className="projects-container" id="projects">
                 <h1>Projects</h1>
                 <div className="project-grid">
                     {
                         projects.map((project) => {
                             return (
                                 <ProjectCard 
-                                    setIsHovering={setIsHovering}
                                     image={project.cardImage}
                                     title={project.title}
                                     description={project.description}
@@ -24,9 +24,8 @@ const Projects = ({ setIsHovering, setProjectScreen }) => {
                         })
                     }
                 </div>
-            </div>
-        </div> 
+        </section> 
     );
 }
  
-export default Projects;
+export default ProjectSection;

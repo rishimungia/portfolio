@@ -1,7 +1,10 @@
-import useMousePosition from '../hooks/useMousePosition';
-import { useRef } from 'react';
+import React, { useRef, useState } from "react"
 
-const HoverButton = ({ setIsHovering, text, link }) => {
+import useMousePosition from '../hooks/useMousePosition';
+
+const HoverButton = ({ setCursorHover, text, link }) => {
+    const [isHovering, setIsHovering] = useState(false);
+
     const { x, y } = useMousePosition();
     let relativeX, relativeY;
 
@@ -13,18 +16,17 @@ const HoverButton = ({ setIsHovering, text, link }) => {
     } 
 
     return (
-        <a href={link} style={{textDecoration: 'none', color: 'var(--text-color)'}}> 
+        <a 
+            href={link} 
+            className="hover-button"
+            onMouseEnter={() => {setIsHovering(true); setCursorHover(true);}}
+            onMouseLeave={() => {setIsHovering(false); setCursorHover(false);}} 
+            ref={inputRef}
+        > 
+            <p style={isHovering ? {transform: `translate(${relativeX/20}px, ${relativeY/15}px)`} : null}>{text}</p>
             <div 
-                className="hover-button"
-                onMouseEnter={() => setIsHovering(true)}
-                onMouseLeave={() => setIsHovering(false)} 
-                ref={inputRef}
-            >
-                {text}
-                <div 
-                    className="hover-btn-effect"
-                    style={{transform: `translate(${relativeX/10}px, ${relativeY/5}px)`}}>
-                </div>
+                className="hover-btn-effect"
+                style={isHovering ? {transform: `translate(${relativeX/10}px, ${relativeY/5}px)`, opacity: '1'} : null}>
             </div>
         </a>
     );

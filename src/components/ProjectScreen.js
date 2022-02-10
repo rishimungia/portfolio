@@ -1,4 +1,6 @@
-import { MdClose } from "react-icons/md";
+import React from "react"
+
+import { MdClose } from "@react-icons/all-files/md/MdClose";
 import projectData from '../data/projectsData';
 
 const ProjectScreen = ({ projectScreen, setProjectScreen }) => {
@@ -8,6 +10,10 @@ const ProjectScreen = ({ projectScreen, setProjectScreen }) => {
         <div 
             className="project-screen-container"
             style={projectScreen.isOpen ? {opacity: 1, pointerEvents: 'unset'} : null}
+            onClick={() => {
+                setProjectScreen({id: projectScreen.id, isOpen: false}); 
+                setTimeout(() => setProjectScreen({id: -1, isOpen: false}), 250)} // delay added to prevent 404 error showing during closing animation
+            }
         >
             <div 
                 className="project-screen"

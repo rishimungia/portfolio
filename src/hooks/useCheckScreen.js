@@ -1,19 +1,18 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const useCheckScreen = () => {
-    const [width, setWidth] = useState(window.innerWidth);
-    const handleWindowSizeChange = () => {
-            setWidth(window.innerWidth);
+    const [isMobile, setIsMobile] = useState(false);
+
+    const checkScreen = () => {
+        if(window.innerWidth <= 768) {
+            setIsMobile(true);
+        }
+        else {
+            setIsMobile(false);
+        }
     }
 
-    useEffect(() => {
-        window.addEventListener('resize', handleWindowSizeChange);
-        return () => {
-            window.removeEventListener('resize', handleWindowSizeChange);
-        }
-    }, []);
-
-    return (width <= 768);
+    return [isMobile, checkScreen]
 }
 
 export default useCheckScreen

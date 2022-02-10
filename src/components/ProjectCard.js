@@ -1,4 +1,6 @@
-const ProjectCard = ({ setIsHovering, image, title, description, delay, onClick }) => {
+import React from "react"
+
+const ProjectCard = ({ image, title, description, delay, onClick }) => {
     return ( 
         <div 
             className="project-card"

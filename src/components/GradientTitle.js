@@ -1,10 +1,12 @@
+import React from "react"
+
 const GradientTitle = ({text}) => {
     return ( 
-        <div className="panel">
+        <section>
             <div className="gradient-container">
                 <p>{text}</p>
             </div>
-        </div>
+        </section>
      );
 }
  
