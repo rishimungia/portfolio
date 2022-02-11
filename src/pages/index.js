@@ -51,7 +51,9 @@ const IndexPage = () => {
   }, [isDark]);
 
   return (
-    <div className="App" data-theme={isDark ? "dark" : "light"} data-scroll={projectScreen.isOpen ? "hidden" : null}>
+    <>
+    <title>Rishi Mungia</title>
+    <main data-theme={isDark ? "dark" : "light"} data-scroll={projectScreen.isOpen ? "hidden" : null}>
       <IntroSection />
       <GradientTitle text={isMobile ? <>Web<br/>Gaming<br/>Design</> : 'Web | Gaming | Design'} />
       <ToolkitSection />
@@ -63,7 +65,8 @@ const IndexPage = () => {
       <Navbar isMobile={isMobile} setCursorHover={setCursorHover} />
       <ProjectScreen projectScreen={projectScreen} setProjectScreen={setProjectScreen} />
       {!isMobile && <Cursor cursorHover={cursorHover} />}
-    </div>
+    </main>
+    </>
   );
 }
 

@@ -10,14 +10,10 @@ const ProjectScreen = ({ projectScreen, setProjectScreen }) => {
         <div 
             className="project-screen-container"
             style={projectScreen.isOpen ? {opacity: 1, pointerEvents: 'unset'} : null}
-            onClick={() => {
-                setProjectScreen({id: projectScreen.id, isOpen: false}); 
-                setTimeout(() => setProjectScreen({id: -1, isOpen: false}), 250)} // delay added to prevent 404 error showing during closing animation
-            }
         >
             <div 
                 className="project-screen"
-                style={projectScreen.isOpen ? {transform: 'translateY(0px)'} : null}
+                style={projectScreen.isOpen ? {transform: 'translateY(0px)', zIndex: '20'} : null}
             >
                 <div 
                     className="close-btn"
