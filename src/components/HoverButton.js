@@ -23,11 +23,11 @@ const HoverButton = ({ setCursorHover, text, link }) => {
             onMouseLeave={() => {setIsHovering(false); setCursorHover(false);}} 
             ref={inputRef}
         > 
-            <p style={isHovering ? {transform: `translate(${relativeX/20}px, ${relativeY/15}px)`} : null}>{text}</p>
             <div 
                 className="hover-btn-effect"
                 style={isHovering ? {transform: `translate(${relativeX/10}px, ${relativeY/5}px)`, opacity: '1'} : null}>
             </div>
+            <p style={isHovering ? {transform: `translate(${relativeX/20}px, ${relativeY/15}px)`} : null}>{text}</p>
         </a>
     );
    

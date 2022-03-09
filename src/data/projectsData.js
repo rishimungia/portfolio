@@ -5,6 +5,7 @@ const projectsData = [
         "description": "Twitter Bot to help people during the COVID19 pandemic",
         "cardImage": require("../data/assets/tweet-bot-card.png").default,
         "coverImage": require("../data/assets/tweet-bot-cover.png").default,
+        "repoLink": "https://github.com/rishimungia/COVIDSOS-TweetBot",
 
         "content": [
             {
@@ -42,11 +43,20 @@ const projectsData = [
         "description": "2D Action Platformer Game made using Unity Engine",
         "cardImage": require("../data/assets/nano-slayer-card-2.png").default,
         "coverImage": require("../data/assets/nano-slayer-cover.png").default,
+        "repoLink": "https://github.com/rishimungia/NanoSlayer-Redux",
 
         "content": [
             {
                 "paragraph": {
                     "content": "This was a semester project that I made with my friends for Computer Graphics course. But just like any other game developer, I was not satisfied with the end result. So I did what any other game developer would do, is to remaster the entire game.\nSo what exactly is Nano Slayer? Well it's an 2D Action Platformer in which you have to fight through endless hoards of enemies. The idea was heighly inspired from the classic FPS Shooter DOOM."
+                }
+            },
+            {
+                "button": {
+                    "title": "| Play Now",
+                    "content": "Download for Windows PC / Mac / Linux",
+                    "buttonTitle": "Download - Itch.io",
+                    "buttonLink": "https://pixelbit-r.itch.io/nano-slayer",
                 }
             },
             {
@@ -93,12 +103,7 @@ const projectsData = [
                     "content": "The game assets all follow pixel-art style. It makes the task of asset creation easy and is pleasing to look at. Along with that Unity's new 2D Lights bundled with the Universal Render Pipeline gives the whole level a sense of depth. And not to forget Unity's amazing Particle System which brings the game world to life, it gives simple boring looking scenes a sence of motion.\nI also used some Pixel Art Assets made by Ansimuz (https://ansimuz.itch.io/)."
                 }
             },
-            {
-                "paragraph": {
-                    "title": "| Play Now",
-                    "content": "Comming Soon!"
-                }
-            }
+            
         ]
     },
 ];

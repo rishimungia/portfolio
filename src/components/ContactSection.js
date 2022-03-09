@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import { MdClose } from "@react-icons/all-files/md/MdClose";
-import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
-import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
-import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
-import { FaDribbble } from "@react-icons/all-files/fa/FaDribbble";
-import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
-import { FaPhoneAlt } from "@react-icons/all-files/fa/FaPhoneAlt";
-import { FaRegClipboard } from "@react-icons/all-files/fa/FaRegClipboard";
+import { MdClose } from "@react-icons/all-files/md/MdClose"
+import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope"
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
+import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin"
+import { FaDribbble } from "@react-icons/all-files/fa/FaDribbble"
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
+import { FaPhoneAlt } from "@react-icons/all-files/fa/FaPhoneAlt"
+import { FaRegClipboard } from "@react-icons/all-files/fa/FaRegClipboard"
 
 export default function ContactSection() {
   const [popup, setPopup] = useState(false);
@@ -40,7 +40,7 @@ export default function ContactSection() {
                 <b>CPU:</b> AMD Ryzen 5 3550H<br />
                 <b>GPU:</b> GTX 1650 4GB<br />
                 <b>RAM:</b> 16GB 2400Hz<br />
-                <b>SSD:</b> 1TB NVME M.2 + 0.25TB<br />
+                <b>SSD:</b> 256GB NVME + 1TB<br />
                 <b>Display:</b> 120Hz 1080p<br />
                 <b>Input:</b> Logitech G102
               </p>

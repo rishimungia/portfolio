@@ -63,7 +63,7 @@ const IndexPage = () => {
       <FloatingMenu isOpen={isOpen} setIsOpen={setIsOpen} isDark={isDark} setIsDark={setIsDark} />
       <FloatingButton isOpen={isOpen} setIsOpen={setIsOpen} />
       <Navbar isMobile={isMobile} setCursorHover={setCursorHover} />
-      <ProjectScreen projectScreen={projectScreen} setProjectScreen={setProjectScreen} />
+      <ProjectScreen projectScreen={projectScreen} setProjectScreen={setProjectScreen} setCursorHover={setCursorHover} />
       {!isMobile && <Cursor cursorHover={cursorHover} />}
     </main>
     </>

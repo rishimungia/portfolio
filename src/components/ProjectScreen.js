@@ -1,9 +1,11 @@
 import React from "react"
 
-import { MdClose } from "@react-icons/all-files/md/MdClose";
-import projectData from '../data/projectsData';
+import { MdClose } from "@react-icons/all-files/md/MdClose"
+import { AiFillGithub } from '@react-icons/all-files/ai/AiFillGithub';
+import projectData from '../data/projectsData'
+import HoverButton from "./HoverButton"
 
-const ProjectScreen = ({ projectScreen, setProjectScreen }) => {
+const ProjectScreen = ({ projectScreen, setProjectScreen, setCursorHover }) => {
     const data = projectData[projectScreen.id];
 
     return ( 
@@ -26,22 +28,28 @@ const ProjectScreen = ({ projectScreen, setProjectScreen }) => {
                 </div>
                 {(data) ? 
                 <>
+                    {/* Cover Image */}
                     <div 
                         className="cover-image"
                         style={{backgroundImage: `url(`+data.coverImage+`)`}}
-                    ></div>
+                    >
+                        {data.repoLink ? <a href={data.repoLink} className="project-repo"><AiFillGithub />Repository</a> : null}
+                    </div>
 
                     <h1>{data.title}</h1>
                     
+                    {/* Project Content */}
                     <>{data.content.map((contentBlock) => {
                         return (
                         <>
+                            {/* Simple Paragraph */}
                             {contentBlock.paragraph ? 
                             <div className="project-para">
                                 {contentBlock.paragraph.title ? <h2>{contentBlock.paragraph.title}</h2> : null}
                                 <p>{contentBlock.paragraph.content}</p>
                             </div> : null}
-
+                            
+                            {/* Image Paragraph */}
                             {contentBlock.imagePara ?
                             <div className="project-img-para">
                                 {(contentBlock.imagePara.style === 0) ? 
@@ -62,10 +70,19 @@ const ProjectScreen = ({ projectScreen, setProjectScreen }) => {
                                     <div className="project-image" style={{backgroundImage: `url(`+contentBlock.imagePara.image+`)`}}></div>
                                 </>}
                             </div> : null}
+                            
+                            {/* Hover Button */}
+                            {contentBlock.button ? 
+                            <div className="project-btn-para">
+                                {contentBlock.button.title ? <h2>{contentBlock.button.title}</h2> : null}
+                                {contentBlock.button.content ? <p>{contentBlock.button.content}</p> : null}
+
+                                <a className="project-btn" href={contentBlock.button.buttonLink}>{contentBlock.button.buttonTitle}</a>
+                                {contentBlock.button.buttonDescription ? <p className="button-des">{contentBlock.button.buttonDescription}</p> : null}
+                            </div> : null}
                         </>    
                         )
                     })}</> 
-
                 </> : 
                 <div className="project-screen-404">
                     <h1>404 Not Found</h1>
