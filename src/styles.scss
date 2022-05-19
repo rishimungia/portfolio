@@ -42,10 +42,11 @@ $aos-distance: 50px; // It has to be above import
     border-radius: 50%;
     background: hsla(0, 0%, 80%, 0.8);
     position: fixed;
+    inset: 0 0;
     z-index: 100;
     pointer-events: none;
     transition: all 0.1s ease-out 0s;
-    transition-property: background, transform, filter;
+    transition-property: background, filter;
 }
 
 /* navbar */
@@ -144,12 +145,18 @@ section {
     transition: all 0.2s ease;
 
     svg {
+        transition: transform 0.3s ease-in-out;
         transform: scale(1.75);
+    }
+}
+.floating-button:hover, .floating-button:focus {
+    svg {
+        transform: rotate(60deg) scale(1.75);
     }
 }
 .floating-btn-popup {
     position: fixed;
-    bottom: 100px;
+    bottom: 95px;
     right: 20px;
     background: #0066CC;
     color: #FFFFFF;
@@ -169,6 +176,9 @@ section {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #0066CC;
+    // z-index: -1;
+    transform: translateY(-0.75rem);
+    animation: 0.3s ease 2.5s slide-in-bottom forwards, 0.3s ease 5s slide-out-bottom forwards;
 }
 
 @keyframes slide-in-left {
@@ -186,6 +196,14 @@ section {
 @keyframes slide-out-right {
     0% {transform: translateX(0rem);}
     100% {transform: translateX(10rem);}
+}
+@keyframes slide-in-bottom {
+    0% { transform: translateY(-0.75rem);}
+    100% { transform: translateY(0rem);}
+}
+@keyframes slide-out-bottom {
+    0% { transform: translateY(0rem);}
+    100% { transform: translateY(-0.75rem);}
 }
 
 .menu-container {

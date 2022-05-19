@@ -25,9 +25,9 @@ const HoverButton = ({ setCursorHover, text, link }) => {
         > 
             <div 
                 className="hover-btn-effect"
-                style={isHovering ? {transform: `translate(${relativeX/10}px, ${relativeY/5}px)`, opacity: '1'} : null}>
+                style={isHovering ? {transform: `translate(${relativeX/5}px, ${relativeY/5}px)`, opacity: '1'} : null}>
             </div>
-            <p style={isHovering ? {transform: `translate(${relativeX/20}px, ${relativeY/15}px)`} : null}>{text}</p>
+            <p style={isHovering ? {transform: `translate(${relativeX/15}px, ${relativeY/15}px)`} : null}>{text}</p>
         </a>
     );
    
