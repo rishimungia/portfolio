@@ -1,0 +1,16 @@
+.cursor {
+    width: 1.25rem;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+    background: hsla(0, 0%, 80%, 0.8);
+    
+    position: fixed;
+    inset: 0 0;
+    z-index: 100;
+    
+    pointer-events: none;
+    
+    transition: all 0.1s ease-out 0s;
+    transition-property: background, filter;
+}

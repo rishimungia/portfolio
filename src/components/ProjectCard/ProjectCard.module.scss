@@ -1,0 +1,123 @@
+.projectCard {
+    width: min(17rem, 90vw);
+    aspect-ratio: 10 / 15;
+
+    background: var(--bg-color);
+    border-radius: 1rem;
+    border: 0.1rem solid var(--border);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+    padding: 1.5rem;
+
+    transition: all 0.3s ease-in-out;
+
+    position: relative;
+    isolation: isolate;
+
+    .bgImage {
+        position: absolute;
+        inset: 0 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-position: center;
+        background-size: 400%;
+        filter: blur(70px) saturate(5) contrast(1.25);
+        opacity: 0;
+
+        transition: all 0.5s ease-in-out;
+        pointer-events: none;
+
+        z-index: -5;
+    }
+
+    .cursorSpot {
+        position: absolute;
+        inset: 0 0;
+
+        width: 50%;
+        aspect-ratio: 1;
+
+        background: #FFF;
+        border-radius: 50%;
+
+        opacity: 0;
+        filter: blur(100px);
+        mix-blend-mode: plus-lighter;
+
+        transition: opacity 0.3s ease-in-out;
+
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .image {
+        background-size: 55%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 60%;
+
+        transition: all 0.3s ease-in-out;
+    }
+
+    .info {
+        display: grid;
+        gap: 0.75rem;
+
+        h2 {
+            font-weight: 500;
+            line-height: 1;
+        }
+        p {
+            font-size: 0.825rem;
+        }
+
+        .techContainer {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+
+            .techChip {
+                min-width: 3rem;
+                padding: 0.15rem 0.5rem;
+
+                text-align: center;
+                font-size: 0.75rem;
+
+                background: hsla(0, 0%, 60%, 0.125);
+                backdrop-filter: blur(20px);
+                border: 1px solid var(--border);
+                border-radius: 5rem;
+
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 10px var(--border);
+        background: var(--card-hover-bg);
+
+        .image {
+            filter: drop-shadow(0px 0px 1px hsla(0, 0%, 15%, 0.5));
+        }
+
+        .bgImage {
+            opacity: 0.5;
+        }
+
+        .cursorSpot {
+            opacity: 0.5;
+        }
+
+        .info .techContainer .techChip {
+            border-color: transparent;
+            background: hsla(0, 0%, 100%, 0.25);
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.navbar {
+    position: fixed;
+    inset: 0 0;
+
+    width: 100%;
+    height: 3.4rem;
+    
+    padding: 0.25rem 1rem;
+    
+    background: hsla(var(--glass-color), 0.7);
+    backdrop-filter: var(--glass-filter);
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    z-index: 10;
+
+    .navLogo {
+        font-size: 1.1rem;
+        color: var(--bg-color);
+        text-align: center;
+        line-height: 2.8rem;
+        text-decoration: none;
+        
+        height: 2.8rem;
+        aspect-ratio: 1;
+        
+        border-radius: 10px;
+        background: var(--text-color);
+        opacity: 0.95;
+    }
+
+    .navLinks {
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0.25rem 0;
+        float: right;
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+.hoverBtn {
+    height: 2.2rem;
+    padding: 0rem 1.4rem;
+    border-radius: 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-color);
+    width: max-content;
+    
+    p {
+        transition: transform 0.05s ease;
+        padding-block: 0rem;
+        will-change: transform;
+    }
+    
+    .hoverBtnEffect {
+        position: absolute;
+        top: -4%;
+        left: -4%;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        transition: transform 0.05s ease, opacity 0.2s ease;
+        will-change: transform, opacity;
+        background: hsla(0, 0%, 80%, 0.25);
+        transform-origin: 100px;
+        pointer-events: none;
+        opacity: 0;
+    }
+}
