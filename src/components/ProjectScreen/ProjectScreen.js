@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 import styles from './ProjectScreen.module.scss';
 
@@ -9,6 +10,16 @@ import projectsData from '@/utils/projectData';
 
 export default function ProjectScreen ({ projectScreen, setProjectScreen }) {
     const data = projectsData[projectScreen?.id];
+
+    useEffect(() => {
+        if (projectScreen?.isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            setTimeout(() => {
+                document.body.style.overflow = 'unset';
+            }, 300)
+        }
+    }, [projectScreen])
 
     return (
         <div 

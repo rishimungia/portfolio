@@ -11,6 +11,7 @@ import Footer from "@/components/Footer/Footer";
 
 import profile from '../../public/images/profile.jpg';
 import techStack from '../../public/images/tech-stack.png';
+import techStackCover from '../../public/images/tech-stack-cover.png';
 import creativeApps from '../../public/images/creative-apps.png';
 
 import projectsData from "@/utils/projectData";
@@ -62,8 +63,8 @@ export default function Home() {
               <FlipCard
                 primaryContent={
                   <div className={styles.techApps}>
-                    <Image src={techStack} />
-                    <p>Adaptive Tech Stack</p>
+                    <Image src={techStackCover} />
+                    {/* <p>Adaptive Tech Stack</p> */}
                   </div>
                 }
               />

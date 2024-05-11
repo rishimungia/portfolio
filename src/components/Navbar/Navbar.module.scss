@@ -1,43 +1,35 @@
 .navbar {
     position: fixed;
-    inset: 0 0;
+    inset: 0.75rem 50%;
+    transform: translateX(-50%);
 
-    width: 100%;
-    height: 3.4rem;
+    width: min(55rem, 95vw);
+    height: 3.5rem;
     
-    padding: 0.25rem 1rem;
+    padding: 0rem 1.25rem;
     
-    background: hsla(var(--glass-color), 0.7);
+    background: hsla(var(--glass-color), 0.5);
+    background: var(--glass-gradient);
     backdrop-filter: var(--glass-filter);
-    border-bottom: 1px solid var(--border);
+    border: 2px solid var(--border);
+    border-radius: 1rem;
+
+    box-shadow: 0px 1px 25px hsla(0, 0%, 0%, 0.1);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-
     z-index: 10;
 
     .navLogo {
-        font-size: 1.1rem;
-        color: var(--bg-color);
+        font-size: 1.125rem;
+        color: var(--text-color);
         text-align: center;
-        line-height: 2.8rem;
         text-decoration: none;
-        
-        height: 2.8rem;
-        aspect-ratio: 1;
-        
-        border-radius: 10px;
-        background: var(--text-color);
-        opacity: 0.95;
     }
 
     .navLinks {
-        height: 100%;
-        box-sizing: border-box;
-        padding: 0.25rem 0;
-        float: right;
         display: flex;
         gap: 1rem;
     }

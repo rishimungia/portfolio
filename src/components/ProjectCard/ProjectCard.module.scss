@@ -104,11 +104,11 @@
         background: var(--card-hover-bg);
 
         .image {
-            filter: drop-shadow(0px 0px 1px hsla(0, 0%, 15%, 0.5));
+            filter: drop-shadow(0px 0px 5px hsla(0, 0%, 15%, 0.25));
         }
 
         .bgImage {
-            opacity: 0.5;
+            opacity: 0.35;
         }
 
         .cursorSpot {
@@ -116,8 +116,8 @@
         }
 
         .info .techContainer .techChip {
-            border-color: transparent;
-            background: hsla(0, 0%, 100%, 0.25);
+            border-color: hsla(0, 0%, 80%, 0.25);
+            background: hsla(0, 0%, 100%, 0.15);
         }
     }
 }

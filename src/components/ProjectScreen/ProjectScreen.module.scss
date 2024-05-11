@@ -19,13 +19,6 @@
     
     z-index: 20;
 
-    /* Hide scrollbar */
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-
     --side-padding: min(5rem, 5vw);
 
     .projectContainer {

@@ -45,7 +45,7 @@ export default function FlipCard({ primaryContent, secondaryContent, primaryBg, 
                 opacity: 1,
                 transform: `rotate${rotateAxis}(0deg)`
             });
-            setZIndex(5);
+            setZIndex(15);
             setLastScrollAmount(window.scrollY);
             setTimeout(() => {
                 setPrimaryStyles({
