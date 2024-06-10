@@ -1,0 +1,19 @@
+.text {
+    font-weight: 700;
+    background-image: linear-gradient(90deg, rgba(10,199,171,1) 10%, rgba(255,252,0,1) 30%, rgba(255,88,39,1) 50%, rgba(255,228,0,1) 70%, rgba(10,199,171,1) 90%);
+    background-size: 400%;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 30s alternate infinite;
+    margin: 0vh;
+    line-height: 1.5;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}

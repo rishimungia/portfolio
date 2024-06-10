@@ -1,0 +1,60 @@
+.bgOverlay {
+    position: fixed;
+    inset: 0 0;
+    z-index: 10;
+
+    width: 100vw;
+    height: 100vh !important;
+
+    background-color: hsla(0, 0%, 0%, 0.7);
+    backdrop-filter: var(--glass-filter);
+
+    transition: all 1s ease-in-out;
+    
+    opacity: 0;
+    pointer-events: none;
+}
+
+#showOverlay {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.card {
+    position: relative;
+    perspective: 3200px;
+
+    .flipBtn {
+        position: absolute;
+        inset: auto 1rem 1rem auto;
+
+        color: #FFF;
+        font-size: 1.75rem;
+        mix-blend-mode: difference;
+        filter: contrast(1.5);
+        opacity: 0.3;
+
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: hsl(0, 0%, 50%);
+        }
+    }
+
+    #close {
+        transform: rotateZ(45deg);
+    }
+
+    .primary, .secondary {
+        background: var(--bg-color);
+        border-radius: 1.5rem;
+        box-shadow: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.1);
+
+        position: absolute;
+        inset: 0 0;
+        width: 100%;
+        height: 100%;
+
+        transition: transform 1s ease-in-out, opacity 0.4s 0.3s ease-in-out;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,94 @@
+.menuContainer {
+    width: 13rem;
+    height: 13rem;
+    background: hsla(0, 0%, 60%, 0.3);
+    backdrop-filter: var(--glass-filter);
+    border-radius: 1rem;
+    
+    position: fixed;
+    inset: auto auto 1.5rem 1.5rem;
+
+    transition: all 0.2s ease;
+    transform-origin: bottom left;
+
+    z-index: 1;
+}
+
+#openBtn {
+    width: 3rem;
+    height: 3rem;
+
+    > svg {
+        position: absolute;
+        inset: 50% 50%;
+        transform: translate(-50%, -50%);
+
+        font-size: 1.5rem;
+
+        transition: all 0.15s ease-in-out;
+        // color: #1D1D1F;
+    }
+    
+    &:hover {
+        > svg {
+            transform: translate(-50%, -50%) rotate(60deg);
+        }
+    }
+}
+
+.menuContent {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 1rem;
+    transform: scale(0.2);
+    transform-origin: bottom left;
+    transition: all 0.2s ease, opacity 0.1s;
+    opacity: 0;
+
+    border-radius: 1rem;
+    
+    .menuItem, .menuItemIcon {
+        height: 3rem;
+        min-width: 3rem;
+
+        background: hsla(0, 0%, 100%, 0.4);
+        border-radius: 0.65rem;
+
+        grid-column: span 3; 
+        
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        position: relative;
+
+        p, a, svg {
+            text-decoration: none;
+            color: #1D1D1F;
+            width: 50%;
+        }
+    }
+
+    .themeSwitch {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+
+        z-index: -1;
+        
+        background: #FFFFFF;
+        border-radius: 0.65rem;
+        transition: 0.2s ease;
+    }
+
+    .menuItemIcon {
+        grid-column: initial;
+        justify-content: center;
+
+        svg {
+            transform: scale(1.5);
+        }
+    }
+}

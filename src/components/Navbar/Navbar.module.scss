@@ -1,0 +1,70 @@
+.navbar {
+    position: fixed;
+    inset: 0.75rem 50%;
+    transform: translateX(-50%);
+
+    width: min(55rem, 95vw);
+    height: 3.5rem;
+    
+    padding: 0rem 1.25rem;
+    
+    background: hsla(var(--glass-color), 0.5);
+    background: var(--glass-gradient);
+    backdrop-filter: var(--glass-filter);
+    border: 2px solid var(--border);
+    border-radius: 1rem;
+
+    box-shadow: 0px 1px 25px hsla(0, 0%, 0%, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+
+    .navLogo {
+        font-size: 1.125rem;
+        color: var(--text-color);
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .navLinks {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+.hoverBtn {
+    height: 2.2rem;
+    padding: 0rem 1.4rem;
+    border-radius: 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-color);
+    width: max-content;
+    
+    p {
+        transition: transform 0.05s ease;
+        padding-block: 0rem;
+        will-change: transform;
+    }
+    
+    .hoverBtnEffect {
+        position: absolute;
+        top: -4%;
+        left: -4%;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        transition: transform 0.05s ease, opacity 0.2s ease;
+        will-change: transform, opacity;
+        background: hsla(0, 0%, 80%, 0.25);
+        transform-origin: 100px;
+        pointer-events: none;
+        opacity: 0;
+    }
+}

@@ -1,28 +1,19 @@
 {
-  "name": "rishimungia.github.io",
-  "version": "1.0.0",
+  "name": "portfolio",
+  "version": "0.1.0",
   "private": true,
-  "description": "rishimungia.github.io",
-  "author": "rishimungia",
-  "keywords": [
-    "gatsby"
-  ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop -H 0.0.0.0 -o",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@react-icons/all-files": "^4.1.0",
     "aos": "^2.3.4",
-    "gatsby": "^4.6.0",
-    "gatsby-plugin-sass": "^5.6.0",
-    "gh-pages": "^3.2.3",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "sass": "^1.49.0"
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.0.1",
+    "sass": "^1.70.0"
   }
 }

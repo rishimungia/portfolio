@@ -1,0 +1,116 @@
+// CSS GLOBAL RESET
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --page-padding: 5vw;
+
+  cursor: none;
+
+  * {
+    cursor: none;
+  }
+
+  /* Other browsers */
+  *::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  *::-webkit-scrollbar-track{
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb{
+    background-color: hsl(0, 0%, 75%);
+    border-radius: 1rem;
+  }
+
+  ::-moz-scrollbar-button, ::-webkit-scrollbar-button {
+    display: none;
+  } 
+
+}
+
+[data-theme="light"] {
+  --bg-color: hsl(0, 0%, 100%);
+  --bg-color-dull: #f5f5f7;
+  --card-hover-bg: hsl(0, 0%, 95%);
+  background: #f5f5f7;
+
+  --text-color: #1D1D1F;
+  --op-text: #FFFFFF;
+  color: var(--text-color);
+
+  --border: hsla(0, 0%, 100%, 0.35);
+  --glass-color: 0, 0%, 85%;
+  --glass-filter: blur(20px) saturate(180%);
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f0f0f;
+  --bg-color-dull: #000000;
+  --card-hover-bg: hsl(0, 0%, 25%);
+  background: hsl(0, 0%, 0%);
+
+  --text-color: #FFFFFF;
+  --op-text: #1D1D1F;
+  color: var(--text-color);
+
+  --border: hsla(0, 0%, 20%, 0.5);
+  --glass-gradient: linear-gradient(-15deg, hsla(0, 0%, 6%, 0.5) 0%, hsla(0, 0%, 15%, 0.5) 100%);
+  --glass-color: 0, 0%, 6%;
+  --glass-filter: blur(20px) saturate(180%);
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: var(--bg-color);
+  padding: 5rem var(--page-padding);
+}
+
+// Tablets
+@media only screen and (min-width: 550px) { 
+  :root {
+    --page-padding: 7.5vw;
+  }
+}
+// Desktop
+@media only screen and (min-width: 1020px) { 
+  :root {
+    --page-padding: 15vw;
+  }
+}
