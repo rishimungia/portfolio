@@ -1,10 +1,77 @@
 const projectsData = [
     {
+        title: "Pegasus Cab",
+        description: "Script Mod for Grand Theft Auto V",
+        cardImage: "/images/pegasus-cab/card.png",
+        coverImage: "/images/pegasus-cab/cover.png", 
+        tech: ["C#", "Script Hook V .NET"],
+        repoLink: "https://github.com/rishimungia/pegasus-cab",
+
+        content: [
+            {
+                paragraph: {
+                    content: "This mod elevates the GTA 5 experience, offering players a customizable and immersive cab service within the game world. Pegasus Cabs is an online cab service rivaling Downtown Cab Co. Offering various tiers of cabs, from economic to luxurious options, Pegasus Cabs is your new go-to for all your transportation needs. To order, simply call the Pegasus Cab contact from your in-game phone and choose your preferred cab type."
+                }
+            },
+            {
+                imagePara: {
+                    title: "| Features",
+                    content: "> Cab Types: Choose from 6 pre-defined cab types, with the option to customize and add more via the 'OnlineCabData.xml' file.\n> Cab Options: Enjoy features like Rush mode for faster travel, Skip for instant teleportation (for an extra cost), and the ability to update or cancel your ride mid-trip.\n> XML Customization: Customize cab types, vehicle spawns, driver models, fares, and more through XML configuration.",
+                    image: "/images/pegasus-cab/features.png"
+                }
+            },
+            {
+                button: {
+                    title: "| Download Now",
+                    content: "The mod has already been downloaded by more than 3000 players. And the total downloads on my gta5-mods profile has crossed 35k unique downloads.",
+                    buttonTitle: "GTA5-Mods",
+                    buttonLink: "https://www.gta5-mods.com/scripts/pegasus-cab",
+                }
+            }
+        ]
+    },
+    {
         title: "Terrain Renderer",
         description: "Simple terrain renderer built using OpenGL",
-        cardImage: "/images/terrain-card.png",
-        coverImage: "/images/terrain-cover.png", 
+        cardImage: "/images/opengl-renderer/terrain-card.png",
+        coverImage: "/images/opengl-renderer/terrain-cover.png", 
         tech: ["C++", "OpenGL", "GLSL"],
+        repoLink: "https://github.com/rishimungia/opengl-terrain-renderer",
+
+        content: [
+            {
+                paragraph: {
+                    content: "This project features a basic OpenGL renderer that generates realistic terrains from provided heightmap. It includes Blinn-Phong shading for natural lighting, normal map support for enhanced surface detail, and texture mapping based on terrain height for varied appearances like grass, rock, and snow. Additionally, it incorporates billboard vegetation, using 2D images for plants and trees."
+                }
+            },
+            {
+                imagePara: {
+                    title: "| Terrain Displacement Map",
+                    content: "The terrain is rendered as a triangle strip. It involves loading a heightmap texture and sending it to the vertex shader, where encoded height value is decoded using shift operations. The calculated height is then used to displace the vertices to render a detailed and realistic terrain mesh.",
+                    image: "/images/opengl-renderer/heightmap.png"
+                }
+            },
+            {
+                imagePara: {
+                    style: 0,
+                    title: "| Shading",
+                    content: "The renderer employs Phong shading to simulate a global directional light, managed through the fragment shader. This shading technique considers the material's roughness and metallic properties, resulting in realistic lighting effects. \n\nSurface normals are calculated in the vertex shader using the decoded height map values and are used by the fragment shader for normal mapping when shading.",
+                    image: "/images/opengl-renderer/normalmap.png"
+                }
+            },
+            {
+                paragraph: {
+                    title: "| Billboards",
+                    content: "The vegetation is rendered using Billboards which are rendered using a geometry shader which processes the vertex positions to create and position quads for the billboards. It outputs the quads only when the random value condition is met, ensuring billboards appear at random locations. The fragment shader renders the billboards on lower height parts of the terrain, discarding the background from the texture."
+                }
+            },
+            {
+                paragraph: {
+                    title: "| Skybox",
+                    content: "Using a vertex shader, the skybox vertices and matrices transform the view to include only rotation, ensuring constant depth. The fragment shader utilizes these transformed coordinates and cubemap textures to render the skybox, creating a seamless background for the scene."
+                }
+            }
+        ]
     },
     {
         title: "COVIDSOS Bot",
