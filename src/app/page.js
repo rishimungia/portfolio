@@ -105,8 +105,7 @@ export default function Home() {
               <h2>About Me</h2>
             <div className={styles.content}>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique non adipisci cupiditate voluptas facere, corporis expedita et sint ratione, minus est eius porro officia assumenda voluptatibus, asperiores sunt eos accusantium.<br /><br />
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, mollitia.
+                Adaptive problem-solver with an innate ability to envision and craft visually stunning user interfaces. Skilled in game development, I bring creativity and precision to every project. A quick learner, I adapt to new technologies seamlessly. Let's collaborate to create immersive experiences. 
               </p>
             </div>
 
