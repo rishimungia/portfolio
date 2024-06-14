@@ -1,3 +1,4 @@
+"use client";
 import styles from "./Project.module.scss";
 
 import { AiFillGithub } from "react-icons/ai";

@@ -30,7 +30,7 @@ export default function ProjectScreen ({ projectId }) {
         }
     }
 
-    return (
+    if (data) return (
         <div className={styles.projectScreen} id={close ? styles.close : styles.closeBtn} onClick={handleClose}>
             <div className={styles.projectContainer}>
                 <div className={styles.closeBtn} onClick={handleClose} id={styles.closeBtn}>

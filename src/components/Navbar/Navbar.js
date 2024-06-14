@@ -23,7 +23,7 @@ export default function Navbar() {
                     RM
                 </Link>
             ) : (
-                <span className={styles.navLogo}>{project.title}</span>
+                <span className={styles.navLogo}>{project?.title}</span>
             )}
 
             <div className={styles.navLinks}>
