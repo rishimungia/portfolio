@@ -19,8 +19,12 @@ import projectsData from "@/utils/projectData";
 import { MdClose } from 'react-icons/md';
 import { FaEnvelope, FaGithub, FaLinkedin, FaDribbble, FaTwitter, FaPhoneAlt, FaRegClipboard } from 'react-icons/fa';
 import ProjectScreen from "@/components/ProjectScreen/ProjectScreen";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Home() {
+  const router = useRouter();
+
   const [popup, setPopup] = useState(false);
   const [aboutPlus, setAboutPlus] = useState(false);
   const [projectScreen, setProjectScreen] = useState({id: -1, isOpen: false});
@@ -63,7 +67,7 @@ export default function Home() {
               <FlipCard
                 primaryContent={
                   <div className={styles.techApps}>
-                    <Image src={techStackCover} />
+                    <Image alt="tech stack" src={techStackCover} />
                     {/* <p>Adaptive Tech Stack</p> */}
                   </div>
                 }
@@ -71,7 +75,7 @@ export default function Home() {
               <FlipCard 
                 primaryContent={
                   <div className={styles.creativeApps}>
-                    <Image src={creativeApps} />
+                    <Image alt="creative apps" src={creativeApps} />
                   </div>
                 }
               />
@@ -85,17 +89,17 @@ export default function Home() {
         <div className={styles.projectGrid}>
           {projectsData.map((project, i) => (
             <ProjectCard 
+                id={project.id}
                 image={project.cardImage}
                 title={project.title}
                 description={project.description}
                 tech={project.tech}
-                openProject={() => setProjectScreen({id: i, isOpen: true})}
+                openProject={() => router.push(`/project/${project.id}`)}
                 key={i}
             />
           ))}
         </div>
       </section> 
-      <ProjectScreen projectScreen={projectScreen} setProjectScreen={setProjectScreen} />
       
       {/* Contact Section */}
       <section className={styles.contactSection} id="contact">
@@ -155,8 +159,6 @@ export default function Home() {
           Copied to Clipboard
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

@@ -18,6 +18,9 @@
     position: relative;
     isolation: isolate;
 
+    text-decoration: none;
+    color: var(--text-color);
+
     .bgImage {
         position: absolute;
         inset: 0 0;

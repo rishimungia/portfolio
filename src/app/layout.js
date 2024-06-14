@@ -7,13 +7,14 @@ import AOSProvider from "../utils/AOSProvider";
 import { ThemeProvider } from "@/utils/ThemeProvider";
 import { CursorProvider } from "@/utils/CursorProvider";
 import Cursor from "@/components/Cursor/Cursor";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: "Rishi Mungia",
   description: "Game Developer, Frontend Developer and UI/UX Enthusiast",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, modal }) {
   return (
     <html lang="en">
       <ThemeProvider>
@@ -22,7 +23,9 @@ export default function RootLayout({ children }) {
             <Navbar />
             <FloatingMenu />
             <Cursor />
+            {modal}
             {children}
+            <Footer />
           </CursorProvider>
         </AOSProvider>
       </ThemeProvider>

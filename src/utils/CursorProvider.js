@@ -1,9 +1,14 @@
 "use client";
-const { createContext, useContext, useState, useEffect } = require("react");
+
+import { usePathname } from "next/navigation";
+
+import { createContext, useContext, useState, useEffect } from "react";
 
 const CursorContext = createContext();
 
 export function CursorProvider ({ children }) {
+    const path = usePathname();
+    
     const [position, setPosition] = useState({x: null, y: null});
     const [isDown, setIsDown] = useState(false);
     const [isHovering, setIsHovering] = useState(false);
@@ -38,6 +43,10 @@ export function CursorProvider ({ children }) {
           document.removeEventListener("mouseup", mouseDownHandler);
         };
     }, []);
+
+    useEffect(() => {
+      setIsHovering(false);
+    }, [path])
 
     return (
         <CursorContext.Provider value={{position, isDown, isHovering, setIsHovering}}>

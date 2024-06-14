@@ -1,10 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import { useRef } from 'react';
 
 import styles from './ProjectCard.module.scss';
 
 import { useCursor } from '@/utils/CursorProvider';
+import { useRouter } from 'next/navigation';
 
-export default function ProjectCard ({ image, title, description, tech, openProject }) {
+export default function ProjectCard ({ id, image, title, description, tech, openProject }) {
+    const router = useRouter();
     const { position, isDown, setIsHovering } = useCursor();
 
     let relativeX, relativeY;
@@ -23,6 +26,8 @@ export default function ProjectCard ({ image, title, description, tech, openProj
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)} 
             ref={cardRef}
+            // onClick={() => router.push(`/project/${id}`)}
+            // href={`/project/${id}`}
         >
             <div className={styles.bgImage} style={{backgroundImage: `url(`+ image +`)`}}></div>
             <div className={styles.cursorSpot} style={{transform: `translate(calc(${relativeX}px - 50%), calc(${relativeY}px - 50%))`}}></div>
@@ -33,7 +38,7 @@ export default function ProjectCard ({ image, title, description, tech, openProj
                 <p>{description}</p>
                 <div className={styles.techContainer}>
                     {tech?.map((item) => (
-                        <div className={styles.techChip}>{item}</div>
+                        <div className={styles.techChip} key={item}>{item}</div>
                     ))}
                 </div>
             </div>

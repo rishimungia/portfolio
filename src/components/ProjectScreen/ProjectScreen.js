@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from './ProjectScreen.module.scss';
 
@@ -7,37 +7,34 @@ import { MdClose } from "react-icons/md";
 import { AiFillGithub } from 'react-icons/ai';
 
 import projectsData from '@/utils/projectData';
+import { useRouter } from 'next/navigation';
 
-export default function ProjectScreen ({ projectScreen, setProjectScreen }) {
-    const data = projectsData[projectScreen?.id];
+export default function ProjectScreen ({ projectId }) {
+    const router = useRouter();
+    const data = projectsData.find((project) => project.id === projectId);
+
+    const [close, setClose] = useState(false);  
 
     useEffect(() => {
-        if (projectScreen?.isOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
+        document.body.style.overflow = 'hidden';
+    }, []);
+
+    function handleClose (event) {
+        if (event.target.id === styles.closeBtn) {
+            setClose(true);
+    
             setTimeout(() => {
                 document.body.style.overflow = 'unset';
-            }, 300)
+                router.back();
+            }, 200);
         }
-    }, [projectScreen])
+    }
 
     return (
-        <div 
-            className={styles.projectScreen}
-            style={projectScreen?.isOpen ? {opacity: 1, pointerEvents: 'unset'} : null}
-        >
-            <div 
-                className={styles.projectContainer}
-                style={projectScreen?.isOpen ? {transform: 'translateY(0px)', zIndex: '20'} : null}
-            >
-                <div 
-                    className={styles.closeBtn}
-                    onClick={() => {
-                        setProjectScreen({id: projectScreen?.id, isOpen: false}); 
-                        setTimeout(() => setProjectScreen({id: -1, isOpen: false}), 250)} // delay added to prevent 404 error showing during closing animation
-                    }
-                >
-                    <MdClose />
+        <div className={styles.projectScreen} id={close ? styles.close : styles.closeBtn} onClick={handleClose}>
+            <div className={styles.projectContainer}>
+                <div className={styles.closeBtn} onClick={handleClose} id={styles.closeBtn}>
+                    <MdClose id={styles.closeBtn}/>
                 </div>
                 {(data) ? 
                 <>
@@ -53,9 +50,9 @@ export default function ProjectScreen ({ projectScreen, setProjectScreen }) {
                     
                     {/* Project Content */}
                     <div className={styles.content}>
-                    {data.content?.map((contentBlock) => {
+                    {data.content?.map((contentBlock, i) => {
                         return (
-                        <>
+                        <span key={i}>
                             {/* Simple Paragraph */}
                             {contentBlock.paragraph ? 
                             <div className={styles.projectPara}>
@@ -94,7 +91,7 @@ export default function ProjectScreen ({ projectScreen, setProjectScreen }) {
                                 <a className={styles.projectBtn} href={contentBlock.button.buttonLink}>{contentBlock.button.buttonTitle}</a>
                                 {contentBlock.button.buttonDescription ? <p className={styles.buttonDes}>{contentBlock.button.buttonDescription}</p> : null}
                             </div> : null}
-                        </>    
+                        </span>    
                         )
                     })}</div> 
                 </> : 

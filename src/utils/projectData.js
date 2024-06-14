@@ -1,5 +1,6 @@
 const projectsData = [
     {
+        id: "pegasus-cab",
         title: "Pegasus Cab",
         description: "Script Mod for Grand Theft Auto V",
         cardImage: "/images/pegasus-cab/card.png",
@@ -31,6 +32,7 @@ const projectsData = [
         ]
     },
     {
+        id: "opengl-terrain",
         title: "Terrain Renderer",
         description: "Simple terrain renderer built using OpenGL",
         cardImage: "/images/opengl-renderer/terrain-card.png",
@@ -74,6 +76,7 @@ const projectsData = [
         ]
     },
     {
+        id: "covidsos-bot",
         title: "COVIDSOS Bot",
         description: "Twitter Bot to help people during the COVID19 pandemic",
         cardImage: "/images/tweet-bot-card.png",
@@ -112,6 +115,7 @@ const projectsData = [
         ]
     },
     {
+        id: "nano-slayer",
         title: "Nano Slayer",
         description: "2D Action Platformer Game made using Unity Engine",
         cardImage: "/images/nano-slayer-card-2.png",

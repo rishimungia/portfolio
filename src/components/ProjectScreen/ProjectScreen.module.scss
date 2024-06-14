@@ -14,22 +14,21 @@
     overflow-y: auto;
     
     opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
+    animation: fadeIn 0.1s ease-in-out forwards;
     
     z-index: 20;
 
-    --side-padding: min(5rem, 5vw);
+    --side-padding: 5vw;
 
     .projectContainer {
-        width: min(55rem, 100vw);
         background: var(--bg-color);
 
         position: relative;
 
-        transform: translateY(50px) translateZ(0rem);
-        transition: transform 0.3s ease-in-out;
-        // overflow: hidden;
+        opacity: 0;
+        transform: translateY(4rem);
+        
+        animation: slideUp 0.3s ease-in-out forwards;
 
         .closeBtn {
             position: absolute;
@@ -42,15 +41,17 @@
             aspect-ratio: 1;
 
             border-radius: 50%;
-            background: hsla(0, 0%, 100%);
+            border: 1px solid var(--border);
+            background: hsla(var(--glass-color), 0.5);
             box-shadow: 0px 0px 10px 0px hsla(0, 0%, 10%, 0.2);
             
-            opacity: 0.5;
-            mix-blend-mode: screen;
-            
-            font-size: 1.5rem;
-            color: #000;
             z-index: 10;
+            
+            svg {
+                font-size: 1.5rem;
+                color: var(--text-color);
+                opacity: 0.6;
+            }
         }
 
         .coverImage {
@@ -67,10 +68,12 @@
                 align-items: center;
                 gap: 0.5rem;
                 inset: auto 1rem 1rem auto;
-                background: hsla(0, 0%, 80%, 0.7);
+                background: var(--glass-gradient);
+                backdrop-filter: var(--glass-filter);
+                border: 1px solid var(--border);
                 padding: 0.2rem 1rem;
                 border-radius: 50px;
-                color: #1D1D1F;
+                color: var(--text-color);
                 text-decoration: none;
                 font-size: 1.1rem;
             }
@@ -103,6 +106,7 @@
             .projectImgPara {
                 display: flex;
                 flex-direction: column;
+                gap: 2.5rem;
                 
                 padding: 0rem var(--side-padding);
 
@@ -116,7 +120,7 @@
                     aspect-ratio: 1;
                     border-radius: 1rem;
                     background-size: cover;
-                    background-position: center;
+                    background-position: center left;
                 }
 
                 
@@ -130,6 +134,10 @@
             }
             #reverse {
                 flex-direction: column-reverse;
+
+                .projectImage {
+                    background-position: center right;
+                }
             }
             
             .projectBtnPara {
@@ -159,25 +167,65 @@
         }
 
     }
+}
 
-    @media only screen and (min-width: 1020px) {
+#close {
+    .projectContainer {
+        animation: slideDown 0.3s ease-in-out forwards;
+    }
+}
 
-        .projectContainer {
-            border-radius: 1rem;
-            margin-block: 4rem;
-    
-            .coverImage {
-                border-radius: 1rem 1rem 0rem 0rem;
-            }
-    
-            .projectImgPara {
-                flex-direction: row !important;
-                gap: 2rem;
-    
-                div {
-                    flex-basis: 100%;
-                }
+@media only screen and (min-width: 1020px) {
+    .projectScreen {
+        padding: 0rem var(--page-padding);
+    }
+
+    .projectContainer {
+        border-radius: 1rem;
+        margin-block: 4rem;
+
+        .coverImage {
+            border-radius: 1rem 1rem 0rem 0rem;
+        }
+
+        .projectImgPara {
+            flex-direction: row !important;
+            gap: 2rem;
+
+            div {
+                flex-basis: 100%;
             }
         }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(4rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    100% {
+        transform: translateY(4rem);
+        opacity: 0;
+    }
+    0% {
+        transform: translateY(0rem);
+        opacity: 1;
     }
 }
