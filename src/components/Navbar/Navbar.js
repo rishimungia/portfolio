@@ -27,15 +27,14 @@ export default function Navbar() {
             )}
 
             <div className={styles.navLinks}>
-                {!isMobile ? (
+                {path === "/" ?
                     <>
-                        <HoverButton text={"Tools"} link={"/#toolkit"} />
+                        {/* <HoverButton text={"Tools"} link={"/#toolkit"} /> */}
                         <HoverButton text={"Projects"} link={"/#projects"} />
                         <HoverButton text={"Contact"} link={"/#contact"} />
-                    </>
-                ) : (
-                    <HoverButton text={"Contact"} link={"/#contact"} />
-                )}
+                    </> :
+                    <HoverButton text={"Home"} link={"/"} />
+                }
             </div>
         </nav>
     );
@@ -55,7 +54,7 @@ function HoverButton({ text, link }) {
     }
 
     return (
-        <a
+        <Link
             href={link}
             className={styles.hoverBtn}
             onMouseEnter={() => {
@@ -94,6 +93,6 @@ function HoverButton({ text, link }) {
             >
                 {text}
             </p>
-        </a>
+        </Link>
     );
 }

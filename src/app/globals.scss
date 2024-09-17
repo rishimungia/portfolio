@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 // CSS GLOBAL RESET
 *, *::before, *::after {
   box-sizing: border-box;
@@ -36,6 +38,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 :root {
   --page-padding: 5vw;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 
   cursor: none;
 
@@ -80,9 +85,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 [data-theme="dark"] {
-  --bg-color: #0f0f0f;
+  --bg-color: hsl(0, 0%, 4%);
   --bg-color-dull: #000000;
-  --card-hover-bg: hsl(0, 0%, 25%);
+  --card-hover-bg: hsl(0, 0%, 40%);
   background: hsl(0, 0%, 0%);
 
   --text-color: #FFFFFF;
@@ -109,9 +114,21 @@ section {
     --page-padding: 7.5vw;
   }
 }
+
 // Desktop
 @media only screen and (min-width: 1020px) { 
   :root {
     --page-padding: 15vw;
+  }
+}
+
+// Tablets and Mobile
+@media only screen and (max-width: 550px) { 
+  :root {
+    cursor: initial;
+
+    * {
+      cursor: initial;
+    }
   }
 }

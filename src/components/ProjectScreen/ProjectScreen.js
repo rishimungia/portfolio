@@ -7,10 +7,11 @@ import { MdClose } from "react-icons/md";
 import { AiFillGithub } from 'react-icons/ai';
 
 import projectsData from '@/utils/projectData';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function ProjectScreen ({ projectId }) {
     const router = useRouter();
+    const path = usePathname();
     const data = projectsData.find((project) => project.id === projectId);
 
     const [close, setClose] = useState(false);  
@@ -21,12 +22,9 @@ export default function ProjectScreen ({ projectId }) {
 
     function handleClose (event) {
         if (event.target.id === styles.closeBtn) {
+            document.body.style.overflow = 'unset';
+            if (path !== "/" && !close) router.back();
             setClose(true);
-    
-            setTimeout(() => {
-                document.body.style.overflow = 'unset';
-                router.back();
-            }, 200);
         }
     }
 

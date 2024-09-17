@@ -14,3 +14,9 @@
     transition: all 0.1s ease-out 0s;
     transition-property: background, filter;
 }
+
+@media only screen and (max-width: 550px) {
+    .cursor {
+        display: none;
+    }
+}

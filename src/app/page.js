@@ -150,7 +150,7 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/rishi-mungia/" className={styles.contactCard}><FaLinkedin /></a>
             <a href="https://dribbble.com/PIXELBIT_r" className={styles.contactCard}><FaDribbble /></a>
             <a href="https://twitter.com/RishiMungia" className={styles.contactCard}><FaTwitter /></a>
-            <a onClick={() => copyToClipboard('+91 88245 40615')} className={styles.contactCard}><FaPhoneAlt /></a>
+            <a onClick={() => copyToClipboard('+44 7425 830686')} className={styles.contactCard}><FaPhoneAlt /></a>
           </div>
         </div>
 
