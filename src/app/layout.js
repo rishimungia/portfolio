@@ -1,4 +1,5 @@
 import "./globals.scss";
+import { Analytics } from '@vercel/analytics/react';
 
 import FloatingMenu from "@/components/FloatingMenu/FloatingMenu";
 import Navbar from "@/components/Navbar/Navbar";
@@ -25,6 +26,7 @@ export default function RootLayout({ children, modal }) {
             <Cursor />
             {modal}
             {children}
+            <Analytics />
             <Footer />
           </CursorProvider>
         </AOSProvider>
